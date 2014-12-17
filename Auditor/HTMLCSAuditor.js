@@ -149,7 +149,7 @@ var HTMLCSAuditor = new function()
     var buildHeaderSection = function(standard, wrapper) {
         var header       = _doc.createElement('div');
         header.className = _prefix + 'header';
-        header.innerHTML = 'HTML_CodeSniffer by Squiz';
+        header.innerHTML = 'ADA Compliance Tool';
         header.setAttribute('title', 'Using standard ' + standard);
 
         var dragging = false;
@@ -511,7 +511,11 @@ var HTMLCSAuditor = new function()
         var issueCountHelpDiv       = _doc.createElement('div');
         issueCountHelpDiv.id        = _prefix + 'settings-issue-count-help';
         issueCountHelpDiv.innerHTML = 'Select the types of issues to include in the report';
-
+        
+        var moreInfoDiv = _doc.createElement('div');
+        moreInfoDiv.id = _prefix + 'ada-more-info';
+        moreInfoDiv.innerHTML = "<a href='#'>For more info click here.</a>";
+        
         var viewReportDiv       = _doc.createElement('div');
         viewReportDiv.id        = _prefix + 'settings-view-report';
         viewReportDiv.innerHTML = 'View Report';
@@ -633,6 +637,7 @@ var HTMLCSAuditor = new function()
         settingsDiv.appendChild(useStandardDiv);
         settingsDiv.appendChild(issueCountDiv);
         settingsDiv.appendChild(issueCountHelpDiv);
+        settingsDiv.appendChild(moreInfoDiv);
         settingsDiv.appendChild(viewReportDiv);
 
         return settingsDiv;
