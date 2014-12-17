@@ -514,7 +514,7 @@ var HTMLCSAuditor = new function()
         
         var moreInfoDiv = _doc.createElement('div');
         moreInfoDiv.id = _prefix + 'ada-more-info';
-        moreInfoDiv.innerHTML = "<a href='#'>For more info click here.</a>";
+        moreInfoDiv.innerHTML = "<a href='http://www.byui.edu/disabilities/contact-us'>For more info click here.</a>";
         
         var viewReportDiv       = _doc.createElement('div');
         viewReportDiv.id        = _prefix + 'settings-view-report';
